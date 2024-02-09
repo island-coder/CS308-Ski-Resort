@@ -49,7 +49,7 @@ void setLighting()
     glLightfv(GL_LIGHT2, GL_DIFFUSE, qaDiffuseLight);
     glLightfv(GL_LIGHT2, GL_SPECULAR, qaSpecularLight);
 // Set the light position
-    GLfloat qaLightPosition0[] = { 2, 20, 2, 1.0 };
+    GLfloat qaLightPosition0[] = { 5, 5, 2, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, qaLightPosition0);
 
 }
@@ -132,7 +132,6 @@ void display()
     //drawSled();
     //drawTPole(8);
     // drawCableCar();
-
     drawLodgeWithBase();
     //drawCableCarWithTower();
 

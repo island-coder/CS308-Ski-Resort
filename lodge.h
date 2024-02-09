@@ -4,7 +4,7 @@ void drawWalls()
 {
     glPushMatrix ();
     glEnable(GL_LIGHTING);
-    glColor3f(0.8,0.7,0.7);
+    //glColor3f(0.8,0.7,0.7);
     glMaterialfv(GL_FRONT, GL_AMBIENT, lightPurple); //FRONT,BACK,FRONT_AND_BACK
     glMaterialfv(GL_FRONT, GL_DIFFUSE, lightPurple);
     // glMaterialfv(GL_FRONT, GL_SPECULAR, white);
@@ -21,6 +21,7 @@ void drawRoof()
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT,GL_AMBIENT_AND_DIFFUSE,brown1);
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glNormal3f(0.0, 0.0, 10.0);
 
     glPushMatrix();
     glColor3f(0.4,0.2,0.2);
@@ -35,6 +36,7 @@ void drawRoof()
     glPushMatrix();
     glColor3f(0.4,0.2,0.2);
     glBegin(GL_QUADS);
+    //glNormal3f(-1.0, 1.0, 1.0);
     glVertex3f(0,1,1.2);
     glVertex3f(0,1,-0.2);
     glVertex3f(-1,0,-0.2);
@@ -48,12 +50,13 @@ void drawRoof()
 
     glPushMatrix();
     glEnable(GL_LIGHTING);
+    glNormal3f(0.0, 0.0, -1.0);
 
-    glMaterialfv(GL_FRONT, GL_AMBIENT, lightPurple); //FRONT,BACK,FRONT_AND_BACK
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, lightPurple);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, lightPurple); //FRONT,BACK,FRONT_AND_BACK
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, lightPurple);
 
     glPushMatrix();
-    glColor3f(0.8,0.7,0.7);
+    // glColor3f(0.8,0.7,0.7);
     glBegin(GL_POLYGON);
     glVertex3f(-1*0.5,0.5,0);
     glVertex3f(0,1,0);
@@ -62,7 +65,7 @@ void drawRoof()
     glPopMatrix();
 
     glPushMatrix();
-    glColor3f(0.8,0.7,0.7);
+//glColor3f(0.8,0.7,0.7);
     glBegin(GL_POLYGON);
     glVertex3f(-1*0.5,0.5,1);
     glVertex3f(0,1,1);
@@ -80,6 +83,11 @@ void drawFence(int n)
 {
 
     glPushMatrix();
+    glEnable(GL_LIGHTING);
+
+    glMaterialfv(GL_FRONT, GL_AMBIENT, darkBrown); //FRONT,BACK,FRONT_AND_BACK
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, darkBrown);
+
     glColor3f(0.8,0.7,0.7);
     float startx=-0.5,x=0;
     float endx=0.5;
@@ -94,6 +102,8 @@ void drawFence(int n)
         glPopMatrix();
         x+=gap;
     }
+
+    glDisable(GL_LIGHTING);
     glPopMatrix();
 }
 
@@ -124,10 +134,24 @@ void drawLodgeWindow()
 {
 
     glPushMatrix();
+    glEnable(GL_LIGHTING);
+
+    glMaterialfv(GL_FRONT, GL_AMBIENT, lightBlue); //FRONT,BACK,FRONT_AND_BACK
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, lightBlue);
     glColor3f(0,0.2,0.8);
     glScalef(0.6,1,0.1);
     glutSolidCube(1);
+    glDisable(GL_LIGHTING);
+
     glPopMatrix();
+
+
+    glPushMatrix();
+    glEnable(GL_LIGHTING);
+
+    glMaterialfv(GL_FRONT, GL_AMBIENT, lightBrown); //FRONT,BACK,FRONT_AND_BACK
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, lightBrown);
+
 
     glPushMatrix ();
     glColor3f(0.7,0.5,0.2);
@@ -173,6 +197,10 @@ void drawLodgeWindow()
     glScalef(0.08,1,0.05);
     glTranslatef(-4,0,1.2);
     glutSolidCube(1);
+    glPopMatrix();
+
+    glDisable(GL_LIGHTING);
+
     glPopMatrix();
 
 }
@@ -276,6 +304,11 @@ void drawStairs()
     float angle = 0,y=0,gap=0.3,height=7,radius=2;
     int n = 10;
 
+    glPushMatrix();
+    glEnable(GL_LIGHTING);
+
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, red1); //FRONT,BACK,FRONT_AND_BACK
+
     while(y<=height)   //idnicate where the helix should end(i.r at cylinder height )
     {
         double x = radius * cos(angle);
@@ -298,10 +331,14 @@ void drawStairs()
 
     glPushMatrix();
     glColor3f(0.6,0.6,0.2);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, darkBrown);
     glRotatef(-90,1,0,0);
     gluCylinder(gluNewQuadric(),1,0.3,height,30,30);
     glPopMatrix();
 
+
+    glDisable(GL_LIGHTING);
+    glPopMatrix();
 
 }
 
@@ -309,10 +346,21 @@ void drawLodgeWithBase()
 {
 
     glPushMatrix();
-    glColor3f(0.6,0,0.6);
-    glScalef(3,0.01,5);
+    glEnable(GL_LIGHTING);
+
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE,darkBrown); //FRONT,BACK,FRONT_AND_BACK
+    //glColor3f(0.6,0,0.6);
+    glScalef(3,0.01,4);
+    glTranslatef(0,0,0.3);
     glutSolidCube(2.5);
+    glDisable(GL_LIGHTING);
     glPopMatrix();
+
+    glPushMatrix();
+    glEnable(GL_LIGHTING);
+
+    glMaterialfv(GL_FRONT, GL_AMBIENT, darkYellow); //FRONT,BACK,FRONT_AND_BACK
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, darkYellow);
 
     glPushMatrix();
     glColor3f(0.7,0.5,0.0);
@@ -340,6 +388,10 @@ void drawLodgeWithBase()
     glTranslatef(2,0,-2);
     glRotatef(-90,1,0,0);
     gluCylinder(gluNewQuadric(),0.2,0.2,5,30,30);
+    glPopMatrix();
+
+    glDisable(GL_LIGHTING);
+
     glPopMatrix();
 
     glPushMatrix();

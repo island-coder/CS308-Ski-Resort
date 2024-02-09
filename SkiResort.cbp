@@ -51,6 +51,10 @@
 		<Unit filename="cablecar.h" />
 		<Unit filename="cablecarpole.h" />
 		<Unit filename="cablecarwithtower.h" />
+		<Unit filename="colors.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="colors.h" />
 		<Unit filename="lodge.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pinetree.h" />
