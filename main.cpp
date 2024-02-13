@@ -8,6 +8,9 @@
 #include "cablecar.h"
 #include "cablecarwithtower.h"
 #include "lodge.h"
+#include "lake.h"
+#include "bench.h"
+#include "scene.h"
 
 // For animating the rotation of the objects
 float sceneRotation = 0.0;
@@ -83,10 +86,10 @@ void drawAxes()
 }
 void DrawGrid()
 {
+    GLint line;
     GLfloat ext = 40.0f;
     GLfloat step = 1.0f;
     GLfloat yGrid = -0.4f;
-    GLint line;
 
     glBegin(GL_LINES);
     for (line = -ext; line <= ext; line += step)
@@ -132,8 +135,10 @@ void display()
     //drawSled();
     //drawTPole(8);
     // drawCableCar();
-    drawLodgeWithBase();
+    //drawLodgeWithBase();
     //drawCableCarWithTower();
+
+    renderScene();
 
     glPopMatrix();
 

@@ -1,5 +1,9 @@
 extern GLfloat white[];
 
+extern GLfloat grey[];
+
+extern GLfloat lightGrey[];
+
 extern GLfloat lightPurple[] ;
 
 extern GLfloat brown1[] ;
@@ -15,3 +19,9 @@ extern GLfloat lightBlue[];
 extern GLfloat darkYellow[];
 
 extern GLfloat red1[];
+
+extern GLfloat purple[];
+
+extern GLfloat orange[];
+
+extern GLfloat wood[];

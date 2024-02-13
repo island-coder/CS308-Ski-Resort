@@ -7,6 +7,7 @@ void drawWalls()
     //glColor3f(0.8,0.7,0.7);
     glMaterialfv(GL_FRONT, GL_AMBIENT, lightPurple); //FRONT,BACK,FRONT_AND_BACK
     glMaterialfv(GL_FRONT, GL_DIFFUSE, lightPurple);
+
     // glMaterialfv(GL_FRONT, GL_SPECULAR, white);
 //glMaterialf(GL_FRONT, GL_SHININESS, 30.0);
     glutSolidCube(1);

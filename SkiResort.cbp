@@ -55,9 +55,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colors.h" />
+		<Unit filename="lake.h" />
 		<Unit filename="lodge.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pinetree.h" />
+		<Unit filename="scene.h" />
 		<Unit filename="sled.h" />
 		<Unit filename="textures/brick2.jpg" />
 		<Unit filename="textures/cable_car_roof.jpg" />
