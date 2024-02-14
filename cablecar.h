@@ -51,7 +51,7 @@ void drawWindow()
 
     glNormal3f(0.0, 5.0, 0.0);
 
-    glColor3f(0.0,0.0,0.4);
+    //glColor3f(0.0,0.0,0.4);
     glBegin(GL_QUADS);
     glTexCoord2f(0.0f, 1.0f);
     glVertex3f(0,1,1);
@@ -80,7 +80,7 @@ void drawBody()
     //  glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, orange);
-    glColor3f(0.8, 0.8, 0.8);
+    //glColor3f(0.8, 0.8, 0.8);
     glutSolidCube(1);
 //   glDisable(GL_TEXTURE_GEN_S);
     // glDisable(GL_TEXTURE_GEN_T);
@@ -104,7 +104,7 @@ void drawBody()
     GLUquadric* quad = gluNewQuadric();
    // gluQuadricTexture(quad, GL_TRUE);
    // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
-    // glColor3f(0.6, 0.3, 0.4);
+    // //glColor3f(0.6, 0.3, 0.4);
     glTranslatef(0, 0.5, -0.5);
     gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
     gluDeleteQuadric(quad);
@@ -116,7 +116,7 @@ void drawBody()
     quad = gluNewQuadric();
    // gluQuadricTexture(quad, GL_TRUE);
    // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
-    // glColor3f(0.6, 0.3, 0.4);
+    // //glColor3f(0.6, 0.3, 0.4);
     glTranslatef(0, -0.5, -0.5);
     gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
     gluDeleteQuadric(quad);
@@ -178,7 +178,7 @@ void drawHandleCurvedBottom(float radius)
     int n = 30;
 
     glPushMatrix();
-    glColor3f(0.40,0.4,0.5);
+    //glColor3f(0.40,0.4,0.5);
 
     glBegin(GL_QUAD_STRIP);
     for (int c = 0; c <= n/4; c++)
@@ -245,7 +245,7 @@ void arch(float radius)
     int n = 30;
 
     glPushMatrix();
-    glColor3f(0.40, 0.4, 0.5);
+    //glColor3f(0.40, 0.4, 0.5);
 
     glBegin(GL_QUAD_STRIP);
     for (int c = 0; c <= n / 4; c++)
@@ -312,7 +312,7 @@ void drawHandeTop()
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, purple);
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
     glMaterialf(GL_FRONT, GL_SHININESS, 30.0);
-    glColor3f(0.40, 0.1, 0.5);
+    //glColor3f(0.40, 0.1, 0.5);
     glScalef(0.5,0.5,1);
     glTranslatef(0,0.5,0);
     glutSolidCube(1);
@@ -325,7 +325,7 @@ void drawHandeBottom()
 {
     glPushMatrix();
 
-    glColor3f(0.40, 0.1, 0.2);
+    //glColor3f(0.40, 0.1, 0.2);
     glScalef(0.1, 0.5, 1);
 
     glutSolidCube(1);
@@ -363,7 +363,7 @@ void drawHandle()
 void drawWire()
 {
     glPushMatrix();
-    glColor3f(0.3, 0.3, 0.3);
+    //glColor3f(0.3, 0.3, 0.3);
     glTranslatef(1, 2,0);
     glRotatef(-90,1,0,0);
     gluCylinder(gluNewQuadric(),0.05,0.05,2.5,30,30);

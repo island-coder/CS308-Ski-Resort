@@ -2,6 +2,8 @@
 #include <math.h>
 #include <SOIL.h>
 #include <stdio.h>
+#include "textures.h"
+
 #include "pinetree.h"
 #include "cablecarpole.h"
 #include "sled.h"
@@ -10,7 +12,12 @@
 #include "lodge.h"
 #include "lake.h"
 #include "bench.h"
+#include "flag.h"
+#include "skybox.h"
+
 #include "scene.h"
+
+
 
 // For animating the rotation of the objects
 float sceneRotation = 0.0;
@@ -28,6 +35,9 @@ GLfloat rotZ = 0.0f;
 float camX = 3.0f;
 float camY = 3.0f;
 float camZ = 3.0f;
+
+
+
 
 
 void setLighting()
@@ -65,29 +75,31 @@ void init()
 
 void drawAxes()
 {
-
+    glPushMatrix();
     glBegin(GL_LINES);
 
     glLineWidth(1.5);
 
-    glColor3f(1.0, 0.0, 0.0); // RED - X
+   // glColor3f(1.0, 0.0, 0.0); // RED - X
     glVertex3f(-40, 0, 0);
     glVertex3f(40, 0, 0);
 
-    glColor3f(0.0, 1.0, 0.0); //GREEN -Y
+    //glColor3f(0.0, 1.0, 0.0); //GREEN -Y
     glVertex3f(0, -40, 0);
     glVertex3f(0, 40, 0);
 
-    glColor3f(0.0, 0.0, 1.0); //BLUE -Z
+   // glColor3f(0.0, 0.0, 1.0); //BLUE -Z
     glVertex3f(0, 0, -40);
     glVertex3f(0, 0, 40);
 
+
     glEnd();
+    glPopMatrix();
 }
 void DrawGrid()
 {
     GLint line;
-    GLfloat ext = 40.0f;
+    GLfloat ext = 100.0f;
     GLfloat step = 1.0f;
     GLfloat yGrid = -0.4f;
 
@@ -115,7 +127,7 @@ void display()
     glPushMatrix();
 
     gluLookAt(0.0 + camX, 1.0 + camY, 5.0 + camZ, 0, 0, 0, 0, 1.0, 0);
-    glColor3f(1.0, 1.0, 1.0);
+    // glColor3f(1.0, 1.0, 1.0);
     //glTranslatef(0.0, 0.0, -5.0);
 
     glTranslatef(moveX, moveY, moveZ);
@@ -211,6 +223,9 @@ int main(int argc, char** argv)
     glutCreateWindow("Ski Resort");
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
+
+
+    loadTextures();
 
     // keyboard function activation
     glutKeyboardFunc(keyboard);

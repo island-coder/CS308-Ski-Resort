@@ -48,6 +48,7 @@
 			<Add library="gdi32" />
 			<Add directory="C:/Program Files/CodeBlocks/MinGW/x86_64-w64-mingw32/lib" />
 		</Linker>
+		<Unit filename="bench.h" />
 		<Unit filename="cablecar.h" />
 		<Unit filename="cablecarpole.h" />
 		<Unit filename="cablecarwithtower.h" />
@@ -55,16 +56,27 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colors.h" />
+		<Unit filename="flag.h" />
 		<Unit filename="lake.h" />
 		<Unit filename="lodge.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pinetree.h" />
 		<Unit filename="scene.h" />
+		<Unit filename="skybox.h" />
 		<Unit filename="sled.h" />
+		<Unit filename="textures.h" />
+		<Unit filename="textures/Maskonaive2/negx.jpg" />
+		<Unit filename="textures/Maskonaive2/negy.jpg" />
+		<Unit filename="textures/Maskonaive2/negz.jpg" />
+		<Unit filename="textures/Maskonaive2/posx.jpg" />
+		<Unit filename="textures/Maskonaive2/posy.jpg" />
+		<Unit filename="textures/Maskonaive2/posz.jpg" />
 		<Unit filename="textures/brick2.jpg" />
 		<Unit filename="textures/cable_car_roof.jpg" />
 		<Unit filename="textures/glass.jpg" />
 		<Unit filename="textures/metallic.jpg" />
+		<Unit filename="textures/skybox0.jpg" />
+		<Unit filename="textures/wood_wall.jpg" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

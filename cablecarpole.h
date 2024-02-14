@@ -33,7 +33,7 @@ void drawBase()
     // glEnable(GL_TEXTURE_GEN_S);
     //glEnable(GL_TEXTURE_GEN_T);
     // glBindTexture(GL_TEXTURE_2D, texture_brick);
-    glColor3f(0.3,0.30,.3);
+    //glColor3f(0.3,0.30,.3);
     glScalef(8,3,3);
     glutSolidCube(1);
     // glDisable(GL_TEXTURE_GEN_S);
@@ -50,9 +50,9 @@ void drawVerticalPole(float height)
     glPushMatrix();
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, grey);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
-    glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
-    glColor3f(0.8,0.8,0.7);
+   // glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+   // glMaterialf(GL_FRONT, GL_SHININESS, 30.0);
+    //glColor3f(0.8,0.8,0.7);
     glRotatef(-90,1,0,0);
     gluCylinder(gluNewQuadric(),1,0.5,height,30,30);
     glDisable(GL_LIGHTING);
@@ -64,7 +64,7 @@ void drawHorizontalPole(float height)
 {
     float k =0.25;
     glPushMatrix();
-    glColor3f(0.7,0.7,0.7);
+    //glColor3f(0.7,0.7,0.7);
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, red1);
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
