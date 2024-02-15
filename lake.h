@@ -65,6 +65,9 @@ void drawBezierLakeSegment()
     glScalef(5,1,8);
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_AMBIENT, lightBlue);
+      glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
+
     glNormal3f(0,1,0);
     glBegin(GL_POLYGON);
     glNormal3f(0,1,0);
@@ -94,6 +97,14 @@ void drawBezierLake()
     glPushMatrix();
     glTranslatef(6,0,0);
     glRotatef(-180,0,1,0);
+    glScalef(2,1,2);
+    drawBezierLakeSegment();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-14,0,0);
+    glRotatef(0,0,1,0);
+    glScalef(2,1,2);
     drawBezierLakeSegment();
     glPopMatrix();
 }

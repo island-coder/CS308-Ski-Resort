@@ -2,7 +2,9 @@
 #include <math.h>
 #include <SOIL.h>
 #include <stdio.h>
+
 #include "textures.h"
+#include "skybox.h"
 
 #include "terrain.h"
 #include "pinetree.h"
@@ -14,7 +16,7 @@
 #include "lake.h"
 #include "bench.h"
 #include "flag.h"
-#include "skybox.h"
+#include "cablecarstation.h"
 
 #include "scene.h"
 
@@ -60,7 +62,7 @@ void setLighting()
     glLightfv(GL_LIGHT2, GL_DIFFUSE, qaDiffuseLight);
     glLightfv(GL_LIGHT2, GL_SPECULAR, qaSpecularLight);
 // Set the light position
-    GLfloat qaLightPosition0[] = { 5, 50, 2, 1.0 };
+    GLfloat qaLightPosition0[] = { 50, 50, 50, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, qaLightPosition0);
 
 }
@@ -177,8 +179,8 @@ void keyboard(unsigned char key, int x, int y)
     if (key == 'Z')
         moveZ -= 1;
 
-    if (key == 'l')
-        rotY -= 5.0;
+    if (key == 'R')
+        rotY -= 1.0;
 
     if (key == 'r')
         rotY += 1.0;

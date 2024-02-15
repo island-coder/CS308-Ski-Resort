@@ -59,17 +59,16 @@ void renderScene()
 
 
     glPushMatrix();
-    glTranslatef(-20,0.8,-20);
-    //glRotatef(-90,0,1,0);
+    glTranslatef(-16,0.8,-33);
+    glRotatef(60,0,1,0);
     // glScalef(0.5,0.5,0.5);
     drawBezierLake();
     glPopMatrix();
 
     glPushMatrix();
-    //glTranslatef(-10,0.8,-10);
-    //glRotatef(-90,0,1,0);
-    // glScalef(0.5,0.5,0.5);
-    drawLodgeWithBase();
+    glTranslatef(-10,0,-15);
+    glRotatef(-90,0,1,0);
+    drawStation();
     glPopMatrix();
 
 

@@ -51,6 +51,7 @@
 		<Unit filename="bench.h" />
 		<Unit filename="cablecar.h" />
 		<Unit filename="cablecarpole.h" />
+		<Unit filename="cablecarstation.h" />
 		<Unit filename="cablecarwithtower.h" />
 		<Unit filename="colors.c">
 			<Option compilerVar="CC" />
@@ -64,6 +65,7 @@
 		<Unit filename="scene.h" />
 		<Unit filename="skybox.h" />
 		<Unit filename="sled.h" />
+		<Unit filename="terrain.h" />
 		<Unit filename="textures.h" />
 		<Unit filename="textures/Maskonaive2/negx.jpg" />
 		<Unit filename="textures/Maskonaive2/negy.jpg" />
