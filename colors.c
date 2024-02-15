@@ -1,6 +1,7 @@
 #include <GL/glut.h>
 
 GLfloat white[] ={1,1,1};
+GLfloat offWhite[]= {0.97,0.98,0.97};
 GLfloat grey[]= {0.8,0.8,0.8};
 GLfloat lightGrey[]= {0.91,0.91,0.91};
 GLfloat lightPurple[] = {0.91, 0.604, 0.863};

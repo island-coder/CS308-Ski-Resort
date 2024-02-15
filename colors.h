@@ -1,5 +1,7 @@
 extern GLfloat white[];
 
+extern GLfloat offWhite[];
+
 extern GLfloat grey[];
 
 extern GLfloat lightGrey[];

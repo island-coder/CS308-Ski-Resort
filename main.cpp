@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "textures.h"
 
+#include "terrain.h"
 #include "pinetree.h"
 #include "cablecarpole.h"
 #include "sled.h"
@@ -37,9 +38,6 @@ float camY = 3.0f;
 float camZ = 3.0f;
 
 
-
-
-
 void setLighting()
 {
     glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
@@ -49,8 +47,8 @@ void setLighting()
 //glEnable(GL_LIGHT1);
 //glEnable(GL_LIGHT2);
 // Set lighting intensity and color
-    GLfloat qaAmbientLight[] = { 0.2, 0.2, 0.2, 1.0 };
-    GLfloat qaDiffuseLight[] = { 0.1, 0.1, 0.1,0.1  };
+    GLfloat qaAmbientLight[] = { 0.7, 0.7, 0.7, 1.0 };
+    GLfloat qaDiffuseLight[] = { 0.4, 0.4, 0.4,0.1  };
     GLfloat qaSpecularLight[] = { 0.1, 0.1, 0.1,0.1 };
     glLightfv(GL_LIGHT0, GL_AMBIENT, qaAmbientLight);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, qaDiffuseLight);
@@ -62,7 +60,7 @@ void setLighting()
     glLightfv(GL_LIGHT2, GL_DIFFUSE, qaDiffuseLight);
     glLightfv(GL_LIGHT2, GL_SPECULAR, qaSpecularLight);
 // Set the light position
-    GLfloat qaLightPosition0[] = { 5, 5, 2, 1.0 };
+    GLfloat qaLightPosition0[] = { 5, 50, 2, 1.0 };
     glLightfv(GL_LIGHT0, GL_POSITION, qaLightPosition0);
 
 }
@@ -135,9 +133,9 @@ void display()
     glRotatef(rotY, 0.0f, 1.0f, 0.0f);
     glRotatef(rotZ, 0.0f, 0.0f, 1.0f);
 
-    DrawGrid();
+    //DrawGrid();
 
-    drawAxes();
+    //drawAxes();
     setLighting();
 
     glPushMatrix();
@@ -147,7 +145,7 @@ void display()
     //drawSled();
     //drawTPole(8);
     // drawCableCar();
-    //drawLodgeWithBase();
+   // drawLodgeWithBase();
     //drawCableCarWithTower();
 
     renderScene();
@@ -194,6 +192,8 @@ void Timer(int x)
 {
 
     //sceneRotation += sceneRotation >= 360.0 ? -sceneRotation : 2;
+    cable_car_mov_z -=0.1;
+    cable_car_mov_y +=0.025;
     glutPostRedisplay();
 
     glutTimerFunc(60, Timer, 1);

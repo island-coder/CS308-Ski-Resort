@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1707831371 source:e:\cs\300l\cs308\project\skiresort\colors.c
+1707973002 source:e:\cs\300l\cs308\project\skiresort\colors.c
 	<GL/glut.h>
 
 1426327440 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glut.h
@@ -2510,12 +2510,13 @@
 	<GL/gl.h>
 	<GL/gl.h>
 
-1707929386 source:e:\cs\300l\cs308\project\skiresort\main.cpp
+1707978840 source:e:\cs\300l\cs308\project\skiresort\main.cpp
 	<GL/glut.h>
 	<math.h>
 	<SOIL.h>
 	<stdio.h>
 	"textures.h"
+	"terrain.h"
 	"pinetree.h"
 	"cablecarpole.h"
 	"sled.h"
@@ -2582,24 +2583,24 @@
 
 1699765283 e:\cs\300l\cs308\project\skiresort\pinetree.h
 
-1707933201 e:\cs\300l\cs308\project\skiresort\cablecarpole.h
+1707967202 e:\cs\300l\cs308\project\skiresort\cablecarpole.h
 	"colors.h"
 
 1707837296 e:\cs\300l\cs308\project\skiresort\sled.h
 
-1707933329 e:\cs\300l\cs308\project\skiresort\cablecar.h
+1707967581 e:\cs\300l\cs308\project\skiresort\cablecar.h
 	"colors.h"
 
-1707831854 e:\cs\300l\cs308\project\skiresort\colors.h
+1707973119 e:\cs\300l\cs308\project\skiresort\colors.h
 
-1702994113 e:\cs\300l\cs308\project\skiresort\cablecarwithtower.h
+1707977752 e:\cs\300l\cs308\project\skiresort\cablecarwithtower.h
 
-1707933033 e:\cs\300l\cs308\project\skiresort\lodge.h
+1707978798 e:\cs\300l\cs308\project\skiresort\lodge.h
 	"colors.h"
 
-1707933061 e:\cs\300l\cs308\project\skiresort\scene.h
+1707978922 e:\cs\300l\cs308\project\skiresort\scene.h
 
-1707909446 e:\cs\300l\cs308\project\skiresort\lake.h
+1707967765 e:\cs\300l\cs308\project\skiresort\lake.h
 	"colors.h"
 
 1707833058 e:\cs\300l\cs308\project\skiresort\bench.h
@@ -2610,4 +2611,7 @@
 1707932227 e:\cs\300l\cs308\project\skiresort\textures.h
 
 1707928779 e:\cs\300l\cs308\project\skiresort\skybox.h
+
+1707974536 e:\cs\300l\cs308\project\skiresort\terrain.h
+	"colors.h"
 

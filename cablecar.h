@@ -102,8 +102,8 @@ void drawBody()
     //glEnable(GL_TEXTURE_2D);
     glPushMatrix();
     GLUquadric* quad = gluNewQuadric();
-   // gluQuadricTexture(quad, GL_TRUE);
-   // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
+    // gluQuadricTexture(quad, GL_TRUE);
+    // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
     // //glColor3f(0.6, 0.3, 0.4);
     glTranslatef(0, 0.5, -0.5);
     gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
@@ -111,17 +111,17 @@ void drawBody()
     glPopMatrix();
     //glDisable(GL_TEXTURE_2D);
 
-  //  glEnable(GL_TEXTURE_2D);
+    //  glEnable(GL_TEXTURE_2D);
     glPushMatrix();
     quad = gluNewQuadric();
-   // gluQuadricTexture(quad, GL_TRUE);
-   // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
+    // gluQuadricTexture(quad, GL_TRUE);
+    // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
     // //glColor3f(0.6, 0.3, 0.4);
     glTranslatef(0, -0.5, -0.5);
     gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
     gluDeleteQuadric(quad);
     glPopMatrix();
-   // glDisable(GL_TEXTURE_2D);
+    // glDisable(GL_TEXTURE_2D);
 
 
 }
@@ -178,6 +178,8 @@ void drawHandleCurvedBottom(float radius)
     int n = 30;
 
     glPushMatrix();
+    glEnable(GL_LIGHTING);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, red1);
     //glColor3f(0.40,0.4,0.5);
 
     glBegin(GL_QUAD_STRIP);
@@ -233,6 +235,7 @@ void drawHandleCurvedBottom(float radius)
         angle = angle + ((2 * PI) / n);
     }
     glEnd();
+    glDisable(GL_LIGHTING);
 
     glPopMatrix();
 }
@@ -246,7 +249,8 @@ void arch(float radius)
 
     glPushMatrix();
     //glColor3f(0.40, 0.4, 0.5);
-
+    glEnable(GL_LIGHTING);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, purple);
     glBegin(GL_QUAD_STRIP);
     for (int c = 0; c <= n / 4; c++)
     {
@@ -300,7 +304,7 @@ void arch(float radius)
         angle = angle + ((2 * PI) / n);
     }
     glEnd();
-
+    glDisable(GL_LIGHTING);
     glPopMatrix();
 }
 
@@ -325,11 +329,13 @@ void drawHandeBottom()
 {
     glPushMatrix();
 
-    //glColor3f(0.40, 0.1, 0.2);
+    glEnable(GL_LIGHTING);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, purple);
     glScalef(0.1, 0.5, 1);
 
     glutSolidCube(1);
 
+    glDisable(GL_LIGHTING);
 
     glPopMatrix();
 }
@@ -364,9 +370,13 @@ void drawWire()
 {
     glPushMatrix();
     //glColor3f(0.3, 0.3, 0.3);
+
+    glEnable(GL_LIGHTING);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, darkBrown);
     glTranslatef(1, 2,0);
     glRotatef(-90,1,0,0);
     gluCylinder(gluNewQuadric(),0.05,0.05,2.5,30,30);
+     glDisable(GL_LIGHTING);
     glPopMatrix();
 }
 

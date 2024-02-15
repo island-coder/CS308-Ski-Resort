@@ -16,6 +16,7 @@ void drawWalls()
 
 }
 
+
 void drawRoof()
 {
     glPushMatrix();
@@ -63,48 +64,48 @@ void drawRoof()
     glPopMatrix();
 
     glPushMatrix();
-    // glEnable(GL_LIGHTING);
+     glEnable(GL_LIGHTING);
     // glNormal3f(0.0, 0.0, -1.0);
 
-    //glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, lightPurple); //FRONT,BACK,FRONT_AND_BACK
-    // glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, lightPurple);
+    glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, lightPurple); //FRONT,BACK,FRONT_AND_BACK
+    glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, lightPurple);
 
-    glBindTexture(GL_TEXTURE_2D, lodge_wall);
+    //glBindTexture(GL_TEXTURE_2D, lodge_wall);
     glPushMatrix();
-    glEnable(GL_TEXTURE_2D);
+   // glEnable(GL_TEXTURE_2D);
     // glColor3f(0.8,0.7,0.7);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    ////glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+ //   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glBegin(GL_POLYGON);
     glVertex3f(-1*0.5,0.5,0);
-    glTexCoord2f(0.0f, 0.0f);
+  //  glTexCoord2f(0.0f, 0.0f);
     glVertex3f(0,1,0);
-    glTexCoord2f(0.5f, 1.0f);
+   // glTexCoord2f(0.5f, 1.0f);
     glVertex3f(1*0.5,0.5,0);
-    glTexCoord2f(1.0f, 0.0f);
+   // glTexCoord2f(1.0f, 0.0f);
     glEnd();
-    glDisable(GL_TEXTURE_2D);
+    //glDisable(GL_TEXTURE_2D);
     glPopMatrix();
 
-    glBindTexture(GL_TEXTURE_2D, lodge_wall);
+    //glBindTexture(GL_TEXTURE_2D, lodge_wall);
     glPushMatrix();
 //glColor3f(0.8,0.7,0.7);
-    glEnable(GL_TEXTURE_2D);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+//    glEnable(GL_TEXTURE_2D);
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+//    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glBegin(GL_POLYGON);
     glVertex3f(-1*0.5,0.5,1);
-    glTexCoord2f(0.0f, 0.0f);
+    //glTexCoord2f(0.0f, 0.0f);
     glVertex3f(0,1,1);
-    glTexCoord2f(0.5f, 1.0f);
+    //glTexCoord2f(0.5f, 1.0f);
     glVertex3f(1*0.5,0.5,1);
-    glTexCoord2f(1.0f, 0.0f);
+    //glTexCoord2f(1.0f, 0.0f);
     glEnd();
     glDisable(GL_TEXTURE_2D);
     glPopMatrix();
 
 
-    // glDisable(GL_LIGHTING);
+    glDisable(GL_LIGHTING);
     glPopMatrix();
 
 
@@ -249,6 +250,7 @@ void drawLodge()
     glPushMatrix();
     glTranslatef(0,0,-0.5);
     drawRoof();
+    //drawWallsTop();
     glPopMatrix();
 
     glPopMatrix();
