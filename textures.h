@@ -1,4 +1,4 @@
-GLuint skybox_negx,skybox_negy,skybox_negz,skybox_posx,skybox_posy,skybox_posz,lodge_roof,lodge_wall,stone_fence,brick;
+GLuint skybox_negx,skybox_negy,skybox_negz,skybox_posx,skybox_posy,skybox_posz,lodge_roof,lodge_wall,stone_fence,brick,stone_brick,snow_brick;
 
 void loadTextures()
 {
@@ -60,11 +60,24 @@ void loadTextures()
                 );
 
     brick=SOIL_load_OGL_texture(
-                    "E:/CS/300L/CS308/Project/SkiResort/textures/brick.jpg",  // Replace with the path to your texture file
+              "E:/CS/300L/CS308/Project/SkiResort/textures/brick.jpg",  // Replace with the path to your texture file
+              SOIL_LOAD_AUTO,
+              SOIL_CREATE_NEW_ID,
+              SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+          );
+    stone_brick=SOIL_load_OGL_texture(
+                    "E:/CS/300L/CS308/Project/SkiResort/textures/stone_brick.jpg",  // Replace with the path to your texture file
                     SOIL_LOAD_AUTO,
                     SOIL_CREATE_NEW_ID,
                     SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
                 );
+
+    snow_brick=SOIL_load_OGL_texture(
+                   "E:/CS/300L/CS308/Project/SkiResort/textures/snow_brick.jpg",  // Replace with the path to your texture file
+                   SOIL_LOAD_AUTO,
+                   SOIL_CREATE_NEW_ID,
+                   SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+               );
 
 
 

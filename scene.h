@@ -87,7 +87,7 @@ void renderScene()
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(-10,0,-15);
+    glTranslatef(-10,0,-14);
     glRotatef(-90,0,1,0);
     drawStation();
     glPopMatrix();
@@ -106,7 +106,49 @@ void renderScene()
     glPopMatrix();
 
     glPushMatrix();
-    drawTexturedCube(2,2,2,stone_fence);
+    glTranslatef(1.5,0,0);
+    drawStoneFence(20);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,0,7.5);
+    glRotatef(90,0,1,0);
+    drawStoneFence(4.5);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-1,0,10);
+    glRotatef(-150,0,1,0);
+    drawStoneFence(10);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-46,0,19.5);
+    drawStoneFence(15);
+    glPopMatrix();
+
+    glPushMatrix();
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(18,0,0);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(9,0,0);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,0,9);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-17,0,19);
+    drawStoneFencePillar();
     glPopMatrix();
 
 

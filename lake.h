@@ -65,7 +65,7 @@ void drawBezierLakeSegment()
     glScalef(5,1,8);
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_AMBIENT, lightBlue);
-      glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
     glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
 
     glNormal3f(0,1,0);
