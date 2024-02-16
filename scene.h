@@ -80,7 +80,7 @@ void renderScene()
 
 
     glPushMatrix();
-    glTranslatef(-16,0.8,-33);
+    glTranslatef(-16,0.35,-33);
     glRotatef(60,0,1,0);
     // glScalef(0.5,0.5,0.5);
     drawBezierLake();

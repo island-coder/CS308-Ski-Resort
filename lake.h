@@ -63,28 +63,38 @@ void drawBezierLakeSegment()
 
     glPushMatrix();
     glScalef(5,1,8);
-    glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, lightBlue);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
-    glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
+    //glEnable(GL_LIGHTING);
+    // glMaterialfv(GL_FRONT, GL_AMBIENT, lightBlue);
+    //glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    // glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
+
+    glEnable(GL_TEXTURE_2D);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glBindTexture(GL_TEXTURE_2D,lake);
 
     glNormal3f(0,1,0);
     glBegin(GL_POLYGON);
-    glNormal3f(0,1,0);
+    //  glNormal3f(0,1,0);
+
     for(float t=0; t<=1; t+=0.01)
     {
         GLfloat x= pow((1-t),3)*P0[0]+3*pow((1-t),2)*t*P1[0]+3*(1-t)*pow(t,2)*P2[0]+pow(t,3)*P3[0];
         GLfloat z= pow((1-t),3)*P0[1]+3*pow((1-t),2)*t*P1[1]+3*(1-t)*pow(t,2)*P2[1]+pow(t,3)*P3[1];
+        glTexCoord2f(x,z);
         glVertex3f(x,0,z);
     }
     for(float t=0; t<=1; t+=0.01)
     {
         GLfloat x= pow((1-t),3)*P3[0]+3*pow((1-t),2)*t*P4[0]+3*(1-t)*pow(t,2)*P5[0]+pow(t,3)*P0[0];
         GLfloat z= pow((1-t),3)*P3[1]+3*pow((1-t),2)*t*P4[1]+3*(1-t)*pow(t,2)*P5[1]+pow(t,3)*P0[1];
+        glTexCoord2f(x,z);
         glVertex3f(x,0,z);
     }
     glEnd();
-    glDisable(GL_LIGHTING);
+    // glDisable(GL_LIGHTING);
+
+    glDisable(GL_TEXTURE_2D);
     glPopMatrix();
 }
 
