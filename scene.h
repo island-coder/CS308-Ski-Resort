@@ -8,14 +8,35 @@ void renderScene()
     glTranslatef(15,-5,-50);
     glScalef(5.5,
              3,5.5);
-    drawHill();
+    drawHill1();
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(0,-5,-50);
     glRotatef(30,0,1,0);
     glScalef(5,4.8,5);
-    drawHill();
+    drawHill1();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,-5,-50);
+    glRotatef(30,0,1,0);
+    glScalef(5,4.8,5);
+    drawHill1();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(5,-5,15);
+    glRotatef(30,0,1,0);
+    glScalef(5,3.5,5);
+    drawHill2();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(30,10,-20);
+    glRotatef(-90,0,1,0);
+    glScalef(0.5,0.5,0.5);
+    drawTPole(10);
     glPopMatrix();
 
     glPushMatrix();
@@ -71,6 +92,22 @@ void renderScene()
     drawStation();
     glPopMatrix();
 
+    glPushMatrix();
+    glTranslatef(-10,0,-2);
+    glRotatef(-120,0,1,0);
+    drawBuilding1();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(-20,0,10);
+    glRotatef(-190,0,1,0);
+    drawBuilding2();
+    glPopMatrix();
+
+    glPushMatrix();
+    drawTexturedCube(2,2,2,stone_fence);
+    glPopMatrix();
 
 
     //drawRoof();

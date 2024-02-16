@@ -1,4 +1,4 @@
-GLuint skybox_negx,skybox_negy,skybox_negz,skybox_posx,skybox_posy,skybox_posz,lodge_roof,lodge_wall;
+GLuint skybox_negx,skybox_negy,skybox_negz,skybox_posx,skybox_posy,skybox_posz,lodge_roof,lodge_wall,stone_fence,brick;
 
 void loadTextures()
 {
@@ -47,15 +47,29 @@ void loadTextures()
                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
                );
     lodge_wall=SOIL_load_OGL_texture(
-                   "E:/CS/300L/CS308/Project/SkiResort/textures/snow_brick.jpg",  // Replace with the path to your texture file
+                   "E:/CS/300L/CS308/Project/SkiResort/textures/wood_wall.jpg",  // Replace with the path to your texture file
                    SOIL_LOAD_AUTO,
                    SOIL_CREATE_NEW_ID,
                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
                );
+    stone_fence=SOIL_load_OGL_texture(
+                    "E:/CS/300L/CS308/Project/SkiResort/textures/stone_wall.jpg",  // Replace with the path to your texture file
+                    SOIL_LOAD_AUTO,
+                    SOIL_CREATE_NEW_ID,
+                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+                );
+
+    brick=SOIL_load_OGL_texture(
+                    "E:/CS/300L/CS308/Project/SkiResort/textures/brick.jpg",  // Replace with the path to your texture file
+                    SOIL_LOAD_AUTO,
+                    SOIL_CREATE_NEW_ID,
+                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+                );
 
 
 
-    if (!lodge_wall)
+
+    if (!brick)
     {
         printf("Texture loading failed: %s\n", SOIL_last_result());
     }

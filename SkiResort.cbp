@@ -62,6 +62,7 @@
 		<Unit filename="lodge.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="pinetree.h" />
+		<Unit filename="resort.h" />
 		<Unit filename="scene.h" />
 		<Unit filename="skybox.h" />
 		<Unit filename="sled.h" />

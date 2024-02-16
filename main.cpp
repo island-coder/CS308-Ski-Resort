@@ -5,6 +5,7 @@
 
 #include "textures.h"
 #include "skybox.h"
+#include "textured_solids.h"
 
 #include "terrain.h"
 #include "pinetree.h"
@@ -17,6 +18,8 @@
 #include "bench.h"
 #include "flag.h"
 #include "cablecarstation.h"
+#include "resort.h"
+#include "fence.h"
 
 #include "scene.h"
 

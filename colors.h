@@ -27,3 +27,7 @@ extern GLfloat purple[];
 extern GLfloat orange[];
 
 extern GLfloat wood[];
+
+extern GLfloat yellowGreen[];
+
+extern GLfloat pink[];

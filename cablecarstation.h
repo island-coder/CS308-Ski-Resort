@@ -60,11 +60,11 @@ void drawStationWalls()
 {
 
     glPushMatrix ();
-    glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, brown1);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, brown1);
-    glutSolidCube(1);
-    glDisable(GL_LIGHTING);
+   // glEnable(GL_LIGHTING);
+ //   glMaterialfv(GL_FRONT, GL_AMBIENT, brown1);
+  //  glMaterialfv(GL_FRONT, GL_DIFFUSE, brown1);
+    drawTexturedCube(1,1,1,brick);
+  //  glDisable(GL_LIGHTING);
     glPopMatrix();
 
 }
