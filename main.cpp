@@ -20,6 +20,7 @@
 #include "cablecarstation.h"
 #include "resort.h"
 #include "fence.h"
+#include "snow.h"
 
 #include "scene.h"
 
@@ -74,6 +75,7 @@ void init()
 {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glEnable(GL_DEPTH_TEST);
+    loadTextures();
 }
 
 void drawAxes()
@@ -83,7 +85,7 @@ void drawAxes()
 
     glLineWidth(1.5);
 
-   // glColor3f(1.0, 0.0, 0.0); // RED - X
+    // glColor3f(1.0, 0.0, 0.0); // RED - X
     glVertex3f(-40, 0, 0);
     glVertex3f(40, 0, 0);
 
@@ -91,7 +93,7 @@ void drawAxes()
     glVertex3f(0, -40, 0);
     glVertex3f(0, 40, 0);
 
-   // glColor3f(0.0, 0.0, 1.0); //BLUE -Z
+    // glColor3f(0.0, 0.0, 1.0); //BLUE -Z
     glVertex3f(0, 0, -40);
     glVertex3f(0, 0, 40);
 
@@ -150,7 +152,7 @@ void display()
     //drawSled();
     //drawTPole(8);
     // drawCableCar();
-   // drawLodgeWithBase();
+    // drawLodgeWithBase();
     //drawCableCarWithTower();
 
     renderScene();
@@ -188,6 +190,9 @@ void keyboard(unsigned char key, int x, int y)
     if (key == 'r')
         rotY += 1.0;
 
+    if (key == 'c')
+        cable_car_enabled=!cable_car_enabled;
+
     glutPostRedisplay();
 
 }
@@ -197,8 +202,8 @@ void Timer(int x)
 {
 
     //sceneRotation += sceneRotation >= 360.0 ? -sceneRotation : 2;
-    cable_car_mov_z -=0.1;
-    cable_car_mov_y +=0.025;
+    animateCableCar();
+    animateSleds();
     glutPostRedisplay();
 
     glutTimerFunc(60, Timer, 1);
@@ -228,9 +233,6 @@ int main(int argc, char** argv)
     glutCreateWindow("Ski Resort");
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
-
-
-    loadTextures();
 
     // keyboard function activation
     glutKeyboardFunc(keyboard);

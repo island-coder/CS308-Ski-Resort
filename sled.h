@@ -1,3 +1,5 @@
+float sled_mov_x=0,sled_mov_y=0,sled_mov_z=0;
+int sled_enabled=true,sled_dir=1;
 
 
 
@@ -88,5 +90,47 @@ void drawSled()
     glTranslatef(-5,0.2,0);
     drawSledSupport();
     glPopMatrix();
+
+}
+
+void placeSleds()
+{
+
+    glPushMatrix();
+    glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
+    glTranslatef(-17,0.6,-28);
+    glScalef(0.1,0.1,0.1);
+    drawSled();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
+    glTranslatef(-20,0.6,-30);
+    glScalef(0.1,0.1,0.1);
+    drawSled();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
+    glTranslatef(-15,0.6,-30);
+    glScalef(0.1,0.1,0.1);
+    glRotatef(30,0,1,0);
+    drawSled();
+    glPopMatrix();
+
+}
+
+void animateSleds()
+{
+    if (sled_enabled)
+    {
+        if(sled_mov_x >= 3 &&  sled_mov_x <= 3.05  ||  sled_mov_x < 0 && sled_mov_x >= -0.5)
+        {
+            sled_dir = -1*sled_dir;
+            printf("sled dir changed\n");
+        }
+        sled_mov_x = sled_mov_x + sled_dir*0.05;
+    }
 
 }

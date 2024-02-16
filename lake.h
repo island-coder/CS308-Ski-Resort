@@ -63,10 +63,10 @@ void drawBezierLakeSegment()
 
     glPushMatrix();
     glScalef(5,1,8);
-    //glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHTING);
     // glMaterialfv(GL_FRONT, GL_AMBIENT, lightBlue);
-    //glMaterialfv(GL_FRONT, GL_SPECULAR, white);
-    // glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
 
     glEnable(GL_TEXTURE_2D);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -92,7 +92,7 @@ void drawBezierLakeSegment()
         glVertex3f(x,0,z);
     }
     glEnd();
-    // glDisable(GL_LIGHTING);
+    glDisable(GL_LIGHTING);
 
     glDisable(GL_TEXTURE_2D);
     glPopMatrix();

@@ -1,4 +1,5 @@
 float cable_car_mov_x=0,cable_car_mov_y=0,cable_car_mov_z=0;
+int cable_car_enabled=false,cable_car_dir=1;
 
 void drawCableCarWithTower()
 {
@@ -40,4 +41,19 @@ void drawCable()
     glDisable(GL_LIGHTING);
     glPopMatrix();
 
+}
+
+void animateCableCar()
+{
+    if (cable_car_enabled)
+    {
+        if(cable_car_mov_y >= 18 &&  cable_car_mov_y <= 18.025 || cable_car_mov_y < 0 && cable_car_mov_y >= -0.025)
+        {
+            cable_car_dir = -1*cable_car_dir;
+            printf("cable car dir changed\n");
+        }
+        printf("%.2f\n",cable_car_mov_y);
+        cable_car_mov_z = cable_car_mov_z - cable_car_dir*0.1;
+        cable_car_mov_y = cable_car_mov_y + cable_car_dir*0.025;
+    }
 }

@@ -57,6 +57,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colors.h" />
+		<Unit filename="fence.h" />
 		<Unit filename="flag.h" />
 		<Unit filename="lake.h" />
 		<Unit filename="lodge.h" />
@@ -66,7 +67,9 @@
 		<Unit filename="scene.h" />
 		<Unit filename="skybox.h" />
 		<Unit filename="sled.h" />
+		<Unit filename="snow.h" />
 		<Unit filename="terrain.h" />
+		<Unit filename="textured_solids.h" />
 		<Unit filename="textures.h" />
 		<Unit filename="textures/Maskonaive2/negx.jpg" />
 		<Unit filename="textures/Maskonaive2/negy.jpg" />

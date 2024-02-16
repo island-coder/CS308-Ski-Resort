@@ -1,4 +1,76 @@
 
+
+
+void mountainFoliage()
+{
+
+    glPushMatrix();
+    glTranslatef(20,4,18);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(26,6,18);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(26,7,23);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(23,3,10);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(30,7,10);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(35,6,8);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(38,4,3);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(10,4,-40);
+    drawPineTree();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(15,4,-30);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(20,2,-10);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(25,5,-15);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(25,8,-30);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(15,7,-35);
+    drawPineTree();
+    glPopMatrix();
+}
+
 void renderScene()
 {
 
@@ -151,6 +223,9 @@ void renderScene()
     drawStoneFencePillar();
     glPopMatrix();
 
+    mountainFoliage();
+
+    placeSleds();
 
     //drawRoof();
     // drawLodgeWithBase();

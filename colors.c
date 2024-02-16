@@ -16,4 +16,5 @@ GLfloat purple[] = {0.918, 0.02, 0.988};
 GLfloat orange[] = {0.98, 0.592, 0};
 GLfloat wood[] = {0.59,0.435,0.2};
 GLfloat yellowGreen[] = {0.808, 1, 0};
+GLfloat pineGreen[] = {0.0392, 0.2824, 0.117};
 GLfloat pink[]= {1, 0.435, 0.718};
