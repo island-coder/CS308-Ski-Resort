@@ -2,74 +2,9 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="scene.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="textures.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4243" topLine="208" />
-		</Cursor>
-	</File>
-	<File name="cablecar.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3098" topLine="63" />
-		</Cursor>
-	</File>
-	<File name="cablecarstation.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1360" topLine="38" />
-		</Cursor>
-	</File>
-	<File name="pinetree.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="255" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4511" topLine="193" />
-		</Cursor>
-	</File>
-	<File name="fence.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="433" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="terrain.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6514" topLine="10" />
-		</Cursor>
-	</File>
-	<File name="lake.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2737" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="flag.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="28" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="colors.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="501" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="resort.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="6901" topLine="322" />
-		</Cursor>
-	</File>
-	<File name="cablecarwithtower.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="897" topLine="29" />
-		</Cursor>
-	</File>
-	<File name="bench.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="282" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="textures.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="4196" topLine="62" />
+			<Cursor1 position="5798" topLine="90" />
 		</Cursor>
 	</File>
 	<File name="textured_solids.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -77,24 +12,49 @@
 			<Cursor1 position="359" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="cablecarpole.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1786" topLine="57" />
-		</Cursor>
-	</File>
-	<File name="sled.h" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2115" topLine="93" />
-		</Cursor>
-	</File>
-	<File name="lodge.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2520" topLine="72" />
-		</Cursor>
-	</File>
 	<File name="snow.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="72" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3743" topLine="105" />
+		</Cursor>
+	</File>
+	<File name="cablecarstation.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1360" topLine="38" />
+		</Cursor>
+	</File>
+	<File name="bench.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="282" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="lake.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2737" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="fence.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="433" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="colors.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="501" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="cablecarwithtower.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1092" topLine="29" />
+		</Cursor>
+	</File>
+	<File name="sled.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2708" topLine="106" />
 		</Cursor>
 	</File>
 	<File name="skybox.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -102,9 +62,49 @@
 			<Cursor1 position="4433" topLine="95" />
 		</Cursor>
 	</File>
+	<File name="resort.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6901" topLine="322" />
+		</Cursor>
+	</File>
+	<File name="cablecarpole.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1786" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="lodge.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2520" topLine="72" />
+		</Cursor>
+	</File>
+	<File name="pinetree.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="255" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="flag.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1268" topLine="34" />
+		</Cursor>
+	</File>
+	<File name="cablecar.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6948" topLine="333" />
+		</Cursor>
+	</File>
 	<File name="colors.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="703" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="terrain.h" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6514" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="scene.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4642" topLine="233" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

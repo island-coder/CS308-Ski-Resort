@@ -53,7 +53,7 @@ void setLighting()
 //glEnable(GL_LIGHT1);
 //glEnable(GL_LIGHT2);
 // Set lighting intensity and color
-    GLfloat qaAmbientLight[] = { 0.7, 0.7, 0.7, 1.0 };
+    GLfloat qaAmbientLight[] = { 0.5, 0.5, 0.5, 1.0 };
     GLfloat qaDiffuseLight[] = { 0.4, 0.4, 0.4,0.1  };
     GLfloat qaSpecularLight[] = { 0.1, 0.1, 0.1,0.1 };
     glLightfv(GL_LIGHT0, GL_AMBIENT, qaAmbientLight);
@@ -151,11 +151,11 @@ void display()
     // drawPineTree();
     //drawSled();
     //drawTPole(8);
-    // drawCableCar();
+   //drawCableCar();
     // drawLodgeWithBase();
     //drawCableCarWithTower();
-
-    renderScene();
+//
+   renderScene();
 
     glPopMatrix();
 
@@ -204,6 +204,7 @@ void Timer(int x)
     //sceneRotation += sceneRotation >= 360.0 ? -sceneRotation : 2;
     animateCableCar();
     animateSleds();
+    animateFlags();
     glutPostRedisplay();
 
     glutTimerFunc(60, Timer, 1);

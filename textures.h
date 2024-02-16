@@ -1,4 +1,5 @@
-GLuint skybox_negx,skybox_negy,skybox_negz,skybox_posx,skybox_posy,skybox_posz,lodge_roof,lodge_wall,stone_fence,brick,stone_brick,snow_brick,lake;
+GLuint skybox_negx,skybox_negy,skybox_negz,skybox_posx,skybox_posy,skybox_posz,lodge_roof,lodge_wall,stone_fence,brick,stone_brick,snow_brick,lake,
+       metallic_stripe,metallic_pattern,glass,cobblestone;
 
 void loadTextures()
 {
@@ -79,16 +80,39 @@ void loadTextures()
                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
                );
     lake=SOIL_load_OGL_texture(
-                   "E:/CS/300L/CS308/Project/SkiResort/textures/lake.jpg",  // Replace with the path to your texture file
-                   SOIL_LOAD_AUTO,
-                   SOIL_CREATE_NEW_ID,
-                   SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
-               );
+             "E:/CS/300L/CS308/Project/SkiResort/textures/lake.jpg",  // Replace with the path to your texture file
+             SOIL_LOAD_AUTO,
+             SOIL_CREATE_NEW_ID,
+             SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+         );
+    metallic_pattern=SOIL_load_OGL_texture(
+                         "E:/CS/300L/CS308/Project/SkiResort/textures/metallic_pattern.jpg",  // Replace with the path to your texture file
+                         SOIL_LOAD_AUTO,
+                         SOIL_CREATE_NEW_ID,
+                         SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+                     );
+    metallic_stripe=SOIL_load_OGL_texture(
+                        "E:/CS/300L/CS308/Project/SkiResort/textures/metallic_stripe.jpg",  // Replace with the path to your texture file
+                        SOIL_LOAD_AUTO,
+                        SOIL_CREATE_NEW_ID,
+                        SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+                    );
+    glass=SOIL_load_OGL_texture(
+              "E:/CS/300L/CS308/Project/SkiResort/textures/glass.jpg",  // Replace with the path to your texture file
+              SOIL_LOAD_AUTO,
+              SOIL_CREATE_NEW_ID,
+              SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+          );
+    cobblestone=SOIL_load_OGL_texture(
+                    "E:/CS/300L/CS308/Project/SkiResort/textures/cobblestone.jpg",  // Replace with the path to your texture file
+                    SOIL_LOAD_AUTO,
+                    SOIL_CREATE_NEW_ID,
+                    SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
+                );
 
 
 
-
-    if (!brick)
+    if (!cobblestone)
     {
         printf("Texture loading failed: %s\n", SOIL_last_result());
     }

@@ -2,54 +2,22 @@
 
 float PI = 3.141;
 
-GLuint texture_glass,texture_cable_car_body,texture_cable_car_roof;
-
-void loadTextureCableCar()
-{
-    texture_glass = SOIL_load_OGL_texture(
-                        "E:/CS/300L/CS308/Project/SkiResort/textures/glass.jpg",  // Replace with the path to your texture file
-                        SOIL_LOAD_AUTO,
-                        SOIL_CREATE_NEW_ID,
-                        SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
-                    );
-
-    texture_cable_car_body=SOIL_load_OGL_texture(
-                               "E:/CS/300L/CS308/Project/SkiResort/textures/metallic.jpg",  // Replace with the path to your texture file
-                               SOIL_LOAD_AUTO,
-                               SOIL_CREATE_NEW_ID,
-                               SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
-                           );
-//    texture_cable_car_roof=SOIL_load_OGL_texture(
-//                               "E:/CS/300L/CS308/Project/SkiResort/textures/cable_car_roof.jpg",  // Replace with the path to your texture file
-//                               SOIL_LOAD_AUTO,
-//                               SOIL_CREATE_NEW_ID,
-//                               SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y
-//                           );
-
-
-    if (!texture_glass)
-    {
-        printf("Texture loading failed: %s\n", SOIL_last_result());
-    }
-    if (!texture_cable_car_body)
-    {
-        printf("Texture loading failed: %s\n", SOIL_last_result());
-    }
-}
 
 void drawWindow()
 {
 
-    //  glEnable(GL_TEXTURE_2D);
-    // glBindTexture(GL_TEXTURE_2D,  texture_glass);
+
 
     glPushMatrix();
-    glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, lightBlue);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
-    glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
+    // glEnable(GL_LIGHTING);
+    // glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, lightBlue);
+    //  glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    // glMaterialf(GL_FRONT, GL_SHININESS, 70.0);
 
-    glNormal3f(0.0, 5.0, 0.0);
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D,  glass);
+
+    //glNormal3f(0.0, 5.0, 0.0);
 
     //glColor3f(0.0,0.0,0.4);
     glBegin(GL_QUADS);
@@ -63,65 +31,42 @@ void drawWindow()
     glVertex3f(0,0,1);
     glEnd();
 
-    glDisable(GL_LIGHTING);
+    glDisable(GL_TEXTURE_2D);
+    // glDisable(GL_LIGHTING);
     glPopMatrix();
 
-    // glDisable(GL_TEXTURE_2D);
+
 
 }
 
 void drawBody()
 {
 
-    // glEnable(GL_TEXTURE_2D);
     glPushMatrix();
-    //  glEnable(GL_TEXTURE_GEN_S);
-    // glEnable(GL_TEXTURE_GEN_T);
-    //  glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
-    glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, orange);
-    //glColor3f(0.8, 0.8, 0.8);
-    glutSolidCube(1);
-//   glDisable(GL_TEXTURE_GEN_S);
-    // glDisable(GL_TEXTURE_GEN_T);
 
-
+    //glEnable(GL_LIGHTING);
+    //glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE, orange);
+    // glutSolidCube(1);
+    drawTexturedCube(1,1,1,metallic_stripe);
     glPopMatrix();
-    //glDisable(GL_TEXTURE_2D);
 
 
-//    glEnable(GL_TEXTURE_GEN_S); //enable texture coordinate generation
-//    glEnable(GL_TEXTURE_GEN_T);
-//    glBindTexture(GL_TEXTURE_2D, theTexture[2]);
-//    glutSolidCube(2);
-//    glDisable(GL_TEXTURE_GEN_S); //enable texture coordinate generation
-//    glDisable(GL_TEXTURE_GEN_T);
-
-
-
-    //glEnable(GL_TEXTURE_2D);
     glPushMatrix();
-    GLUquadric* quad = gluNewQuadric();
-    // gluQuadricTexture(quad, GL_TRUE);
-    // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
-    // //glColor3f(0.6, 0.3, 0.4);
+    //  GLUquadric* quad = gluNewQuadric();
     glTranslatef(0, 0.5, -0.5);
-    gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
-    gluDeleteQuadric(quad);
+    // gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
+    // gluDeleteQuadric(quad);
+    drawTexturedCylinder(0.5,1,lodge_wall);
     glPopMatrix();
-    //glDisable(GL_TEXTURE_2D);
 
-    //  glEnable(GL_TEXTURE_2D);
     glPushMatrix();
-    quad = gluNewQuadric();
-    // gluQuadricTexture(quad, GL_TRUE);
-    // glBindTexture(GL_TEXTURE_2D, texture_cable_car_body);
-    // //glColor3f(0.6, 0.3, 0.4);
+    // quad = gluNewQuadric();
     glTranslatef(0, -0.5, -0.5);
-    gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
-    gluDeleteQuadric(quad);
+    // gluCylinder(quad, 0.5, 0.5, 1, 30, 30);
+    drawTexturedCylinder(0.5,1,lodge_wall);
+    //gluDeleteQuadric(quad);
     glPopMatrix();
-    // glDisable(GL_TEXTURE_2D);
+
 
 
 }
@@ -376,7 +321,16 @@ void drawWire()
     glTranslatef(1, 2,0);
     glRotatef(-90,1,0,0);
     gluCylinder(gluNewQuadric(),0.05,0.05,2.5,30,30);
-     glDisable(GL_LIGHTING);
+    glDisable(GL_LIGHTING);
+
+    glEnable(GL_LIGHTING);
+    glMaterialfv(GL_FRONT, GL_AMBIENT_AND_DIFFUSE,lightBlue );
+    glTranslatef(0, 0,2.5);
+    glRotatef(90,1,0,0);
+    glutSolidTorus(0.08,0.1,25,25);
+    glDisable(GL_LIGHTING);
+
+
     glPopMatrix();
 }
 

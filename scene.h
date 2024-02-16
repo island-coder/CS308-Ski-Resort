@@ -71,6 +71,193 @@ void mountainFoliage()
     glPopMatrix();
 }
 
+void foliage()
+{
+
+    glPushMatrix();
+    glTranslatef(0,0,-28);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-4,0,-32);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-8,0,-30);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-5,0,-35);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-3,0,-40);
+    drawPineTree();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-6,0,-45);
+    drawPineTree();
+    glPopMatrix();
+}
+
+void placeFlags()
+{
+    glPushMatrix();
+    glTranslatef(28,10,15);
+    glScalef(0.5,0.5,0.5);
+    glRotatef(30,0,1,0);
+    drawFlag(red1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(15,5,20);
+    glScalef(0.5,0.5,0.5);
+    glRotatef(30,0,1,0);
+    drawFlag(red1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(10,8,-35);
+    glScalef(0.5,0.5,0.5);
+    glRotatef(-50,0,1,0);
+    drawFlag(red1);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(20,12,-35);
+    glScalef(0.5,0.5,0.5);
+    glRotatef(-50,0,1,0);
+    drawFlag(red1);
+    glPopMatrix();
+}
+
+void placeFence()
+{
+    glPushMatrix();
+    glTranslatef(1.5,0,0);
+    drawStoneFence(20);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,0,7.5);
+    glRotatef(90,0,1,0);
+    drawStoneFence(4.5);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-1,0,10);
+    glRotatef(-150,0,1,0);
+    drawStoneFence(10);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-46,0,19.5);
+    drawStoneFence(15);
+    glPopMatrix();
+
+    glPushMatrix();
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(18,0,0);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(9,0,0);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,0,9);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-17,0,19);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-25,0,19);
+    drawStoneFencePillar();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-33,0,19);
+    drawStoneFencePillar();
+    glPopMatrix();
+}
+
+void placeBuildings()
+{
+
+    glPushMatrix();
+    glTranslatef(-10,0,-13);
+    glRotatef(-90,0,1,0);
+    drawStation();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-10,0,-2);
+    glRotatef(-120,0,1,0);
+    drawBuilding1();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(-20,0,10);
+    glRotatef(-190,0,1,0);
+    drawBuilding2();
+    glPopMatrix();
+}
+
+void placeTownSquare()
+{
+
+    glPushMatrix();
+    glTranslatef(-30,0,10);
+    for(int i=0; i<20; i++)
+    {
+        for(int j=0; j<30; j++)
+        {
+            glPushMatrix();
+            glTranslatef(i,0,-j);
+            drawTexturedCube(0.1,3,3,cobblestone);
+            glPopMatrix();
+        }
+    }
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-18,0,-18);
+    glScalef(0.3,0.3,0.3);
+    glRotatef(0,0,1,0);
+    drawBench();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-21,0,-18);
+    glScalef(0.3,0.3,0.3);
+    glRotatef(0,0,1,0);
+    drawBench();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-24,0,-18);
+    glScalef(0.3,0.3,0.3);
+    glRotatef(0,0,1,0);
+    drawBench();
+    glPopMatrix();
+}
+
+
 void renderScene()
 {
 
@@ -146,10 +333,9 @@ void renderScene()
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(-10,5.3,-22);
+    glTranslatef(-10,5.3,-22.5);
     drawCable();
     glPopMatrix();
-
 
     glPushMatrix();
     glTranslatef(-16,0.35,-33);
@@ -158,81 +344,18 @@ void renderScene()
     drawBezierLake();
     glPopMatrix();
 
-    glPushMatrix();
-    glTranslatef(-10,0,-14);
-    glRotatef(-90,0,1,0);
-    drawStation();
-    glPopMatrix();
+    placeBuildings();
 
-    glPushMatrix();
-    glTranslatef(-10,0,-2);
-    glRotatef(-120,0,1,0);
-    drawBuilding1();
-    glPopMatrix();
+    placeTownSquare();
 
-
-    glPushMatrix();
-    glTranslatef(-20,0,10);
-    glRotatef(-190,0,1,0);
-    drawBuilding2();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(1.5,0,0);
-    drawStoneFence(20);
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(0,0,7.5);
-    glRotatef(90,0,1,0);
-    drawStoneFence(4.5);
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(-1,0,10);
-    glRotatef(-150,0,1,0);
-    drawStoneFence(10);
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(-46,0,19.5);
-    drawStoneFence(15);
-    glPopMatrix();
-
-    glPushMatrix();
-    drawStoneFencePillar();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(18,0,0);
-    drawStoneFencePillar();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(9,0,0);
-    drawStoneFencePillar();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(0,0,9);
-    drawStoneFencePillar();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(-17,0,19);
-    drawStoneFencePillar();
-    glPopMatrix();
+    placeFence();
 
     mountainFoliage();
 
+    foliage();
+
     placeSleds();
 
-    //drawRoof();
-    // drawLodgeWithBase();
-    // drawCableCarWithTower();
-    //drawLake();
-    //drawBezierLake();
-    // drawBezierFlag();
-    //drawBench();
-    //drawSled();
+    placeFlags();
+
 }

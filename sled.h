@@ -125,7 +125,7 @@ void animateSleds()
 {
     if (sled_enabled)
     {
-        if(sled_mov_x >= 3 &&  sled_mov_x <= 3.05  ||  sled_mov_x < 0 && sled_mov_x >= -0.5)
+        if( (sled_mov_x >= 3 &&  sled_mov_x <= 3.05 ) ||(sled_mov_x < 0 && sled_mov_x >= -0.5))
         {
             sled_dir = -1*sled_dir;
             printf("sled dir changed\n");

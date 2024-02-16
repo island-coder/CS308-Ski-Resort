@@ -2510,7 +2510,7 @@
 	<GL/gl.h>
 	<GL/gl.h>
 
-1708070636 source:e:\cs\300l\cs308\project\skiresort\main.cpp
+1708101653 source:e:\cs\300l\cs308\project\skiresort\main.cpp
 	<GL/glut.h>
 	<math.h>
 	<SOIL.h>
@@ -2591,9 +2591,9 @@
 1707967202 e:\cs\300l\cs308\project\skiresort\cablecarpole.h
 	"colors.h"
 
-1708071905 e:\cs\300l\cs308\project\skiresort\sled.h
+1708081876 e:\cs\300l\cs308\project\skiresort\sled.h
 
-1707967581 e:\cs\300l\cs308\project\skiresort\cablecar.h
+1708101628 e:\cs\300l\cs308\project\skiresort\cablecar.h
 	"colors.h"
 
 1708066465 e:\cs\300l\cs308\project\skiresort\colors.h
@@ -2603,7 +2603,7 @@
 1707987188 e:\cs\300l\cs308\project\skiresort\lodge.h
 	"colors.h"
 
-1708070621 e:\cs\300l\cs308\project\skiresort\scene.h
+1708103656 e:\cs\300l\cs308\project\skiresort\scene.h
 
 1708067548 e:\cs\300l\cs308\project\skiresort\lake.h
 	"colors.h"
@@ -2611,9 +2611,9 @@
 1707833058 e:\cs\300l\cs308\project\skiresort\bench.h
 	"colors.h"
 
-1707902621 e:\cs\300l\cs308\project\skiresort\flag.h
+1708082701 e:\cs\300l\cs308\project\skiresort\flag.h
 
-1708061172 e:\cs\300l\cs308\project\skiresort\textures.h
+1708102598 e:\cs\300l\cs308\project\skiresort\textures.h
 
 1707928779 e:\cs\300l\cs308\project\skiresort\skybox.h
 
