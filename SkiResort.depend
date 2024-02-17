@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1708066451 source:e:\cs\300l\cs308\project\skiresort\colors.c
+1708143050 source:e:\cs\300l\cs308\project\skiresort\colors.c
 	<GL/glut.h>
 
 1426327440 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glut.h
@@ -2510,7 +2510,7 @@
 	<GL/gl.h>
 	<GL/gl.h>
 
-1708101653 source:e:\cs\300l\cs308\project\skiresort\main.cpp
+1708143723 source:e:\cs\300l\cs308\project\skiresort\main.cpp
 	<GL/glut.h>
 	<math.h>
 	<SOIL.h>
@@ -2586,9 +2586,9 @@
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_print_pop.h
 
-1708066929 e:\cs\300l\cs308\project\skiresort\pinetree.h
+1708143693 e:\cs\300l\cs308\project\skiresort\pinetree.h
 
-1707967202 e:\cs\300l\cs308\project\skiresort\cablecarpole.h
+1708140838 e:\cs\300l\cs308\project\skiresort\cablecarpole.h
 	"colors.h"
 
 1708081876 e:\cs\300l\cs308\project\skiresort\sled.h
@@ -2596,16 +2596,16 @@
 1708101628 e:\cs\300l\cs308\project\skiresort\cablecar.h
 	"colors.h"
 
-1708066465 e:\cs\300l\cs308\project\skiresort\colors.h
+1708143069 e:\cs\300l\cs308\project\skiresort\colors.h
 
-1708070856 e:\cs\300l\cs308\project\skiresort\cablecarwithtower.h
+1708138158 e:\cs\300l\cs308\project\skiresort\cablecarwithtower.h
 
 1707987188 e:\cs\300l\cs308\project\skiresort\lodge.h
 	"colors.h"
 
-1708103656 e:\cs\300l\cs308\project\skiresort\scene.h
+1708143940 e:\cs\300l\cs308\project\skiresort\scene.h
 
-1708067548 e:\cs\300l\cs308\project\skiresort\lake.h
+1708138242 e:\cs\300l\cs308\project\skiresort\lake.h
 	"colors.h"
 
 1707833058 e:\cs\300l\cs308\project\skiresort\bench.h
@@ -2617,12 +2617,12 @@
 
 1707928779 e:\cs\300l\cs308\project\skiresort\skybox.h
 
-1708010506 e:\cs\300l\cs308\project\skiresort\terrain.h
+1708138450 e:\cs\300l\cs308\project\skiresort\terrain.h
 	"colors.h"
 
 1708056120 e:\cs\300l\cs308\project\skiresort\cablecarstation.h
 
-1708055852 e:\cs\300l\cs308\project\skiresort\resort.h
+1708139614 e:\cs\300l\cs308\project\skiresort\resort.h
 
 1708059955 e:\cs\300l\cs308\project\skiresort\fence.h
 

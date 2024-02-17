@@ -60,11 +60,11 @@ void builidngWall(GLfloat * color,GLuint texture)
 {
 
     glPushMatrix ();
-   // glEnable(GL_LIGHTING);
+    // glEnable(GL_LIGHTING);
     //glMaterialfv(GL_FRONT, GL_AMBIENT, color);
     //glMaterialfv(GL_FRONT, GL_DIFFUSE, color);
     drawTexturedCube(1,1,1,texture);
-   // glDisable(GL_LIGHTING);
+    // glDisable(GL_LIGHTING);
     glPopMatrix();
 
 }
@@ -81,6 +81,29 @@ void buildingDoor(GLfloat * color)
     glPopMatrix();
 }
 
+void buildingChimney()
+{
+
+    glPushMatrix ();
+
+    // glTranslatef(0,2,0);
+    glScalef(0.2,0.2,0.2);
+    drawTexturedCube(2,1,1,brick);
+    glPopMatrix();
+
+    glPushMatrix ();
+    glTranslatef(0,0.2,0);
+    glScalef(0.2,0.2,0.2);
+    drawTexturedCube(0.2,1.2,1.2,snow_brick);
+    glPopMatrix();
+
+    glPushMatrix ();
+    glTranslatef(0,0,0);
+    glScalef(0.2,0.2,0.2);
+    drawTexturedCube(0.2,1.2,1.2,snow_brick);
+    glPopMatrix();
+
+}
 void buildingBase(GLfloat * color)
 {
     glPushMatrix ();
@@ -175,13 +198,13 @@ void drawBuilding1()
     drawLodgeWindow();
     glPopMatrix();
 
-        glPushMatrix ();
+    glPushMatrix ();
     glTranslatef(-0.6,0.3,0.5);
     glScalef(0.2,0.2,0.2);
     drawLodgeWindow();
     glPopMatrix();
 
-        glPushMatrix ();
+    glPushMatrix ();
     glTranslatef(0.5,0.3,0.2);
     glScalef(0.2,0.2,0.2);
     glRotatef(90,0,1,0);
@@ -241,7 +264,7 @@ void drawBuilding2()
     glPushMatrix ();
     glTranslatef(0.7,0,0);
     glRotatef(-180,0,1,0);
-     glScalef(1.2,1,1);
+    glScalef(1.2,1,1);
     buildingRoof(brown1,wood);
     glPopMatrix();
 
@@ -305,7 +328,7 @@ void drawBuilding2()
     drawLodgeWindow();
     glPopMatrix();
 
-        glPushMatrix ();
+    glPushMatrix ();
     glTranslatef(-0.9,0.3,0.65);
     glScalef(0.2,0.2,0.2);
     drawLodgeWindow();
@@ -338,6 +361,12 @@ void drawBuilding2()
     glScalef(1.2,1,1);
     //glRotatef(90,0,1,0);
     buildingDoor(darkBrown);
+    glPopMatrix();
+
+    glPushMatrix ();
+    glTranslatef(-0.5,1.1,-0.40);
+    //glScalef(1.2,1,1);
+    buildingChimney();
     glPopMatrix();
 
     glPushMatrix ();

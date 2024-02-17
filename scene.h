@@ -255,6 +255,36 @@ void placeTownSquare()
     glRotatef(0,0,1,0);
     drawBench();
     glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-30,0,-10);
+    glScalef(0.3,0.3,0.3);
+    glRotatef(90,0,1,0);
+    drawBench();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-30,0,-5);
+    glScalef(0.3,0.3,0.3);
+    glRotatef(90,0,1,0);
+    drawBench();
+    glPopMatrix();
+
+     glPushMatrix();
+    glTranslatef(-30,0,0);
+    glScalef(0.3,0.3,0.3);
+    glRotatef(90,0,1,0);
+    drawBench();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-20,0,-6);
+    //glScalef(0.3,0.3,0.3);
+    drawChristmasTree();
+    glPopMatrix();
+
+
+
 }
 
 
@@ -338,7 +368,7 @@ void renderScene()
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(-16,0.35,-33);
+    glTranslatef(-17,0.35,-33);
     glRotatef(60,0,1,0);
     // glScalef(0.5,0.5,0.5);
     drawBezierLake();

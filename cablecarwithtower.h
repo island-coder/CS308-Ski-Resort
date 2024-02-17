@@ -9,7 +9,7 @@ void drawCableCarWithTower()
     glPushMatrix();
     glTranslatef(cable_car_mov_x,cable_car_mov_y,cable_car_mov_z);
     glScalef(0.6,0.6,0.6);
-    glTranslatef(11,5,0);
+    glTranslatef(11,4.6,0);
     glRotatef(180,0,1,0);
     drawCableCar();
     glPopMatrix();
@@ -17,7 +17,7 @@ void drawCableCarWithTower()
     glPushMatrix();
     glTranslatef(cable_car_mov_x,cable_car_mov_y,cable_car_mov_z);
     glScalef(0.6,0.6,0.6);
-    glTranslatef(-11,5,0);
+    glTranslatef(-11,4.6,0);
     drawCableCar();
     glPopMatrix();
 

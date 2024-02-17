@@ -48,26 +48,29 @@ void setLighting()
 {
     glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
 //glLightModeli(GL_LIGHT_MODEL_TWO_SIDE,GL_TRUE);
-    glEnable(GL_LIGHT0);
+//   glEnable(GL_LIGHT0);
 //glDisable(GL_LIGHT0); // disable light source
 //glEnable(GL_LIGHT1);
 //glEnable(GL_LIGHT2);
 // Set lighting intensity and color
     GLfloat qaAmbientLight[] = { 0.5, 0.5, 0.5, 1.0 };
     GLfloat qaDiffuseLight[] = { 0.4, 0.4, 0.4,0.1  };
-    GLfloat qaSpecularLight[] = { 0.1, 0.1, 0.1,0.1 };
+    GLfloat qaSpecularLight[] = { 0.05, 0.05, 0.05,0.05 };
     glLightfv(GL_LIGHT0, GL_AMBIENT, qaAmbientLight);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, qaDiffuseLight);
     glLightfv(GL_LIGHT0, GL_SPECULAR, qaSpecularLight);
+
     glLightfv(GL_LIGHT1, GL_AMBIENT, qaAmbientLight);
-//glLightfv(GL_LIGHT1, GL_DIFFUSE, qaDiffuseLight);
-// glLightfv(GL_LIGHT1, GL_SPECULAR, qaSpecularLight);
-    glLightfv(GL_LIGHT2, GL_AMBIENT, qaAmbientLight);
-    glLightfv(GL_LIGHT2, GL_DIFFUSE, qaDiffuseLight);
-    glLightfv(GL_LIGHT2, GL_SPECULAR, qaSpecularLight);
-// Set the light position
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, qaDiffuseLight);
+    GLfloat qaSpecularLight1[] = { 0.01, 0.01, 0.01,0.1 };
+    glLightfv(GL_LIGHT1, GL_SPECULAR, qaSpecularLight1);
+
+
     GLfloat qaLightPosition0[] = { 50, 50, 50, 1.0 };
+    GLfloat qaLightPosition1[] = { -50, 50, -50, 1.0 };
+
     glLightfv(GL_LIGHT0, GL_POSITION, qaLightPosition0);
+     glLightfv(GL_LIGHT1, GL_POSITION, qaLightPosition1);
 
 }
 
@@ -151,11 +154,12 @@ void display()
     // drawPineTree();
     //drawSled();
     //drawTPole(8);
-   //drawCableCar();
+    //drawCableCar();
     // drawLodgeWithBase();
     //drawCableCarWithTower();
-//
-   renderScene();
+    //drawChristmasTree();
+
+    renderScene();
 
     glPopMatrix();
 
@@ -192,6 +196,20 @@ void keyboard(unsigned char key, int x, int y)
 
     if (key == 'c')
         cable_car_enabled=!cable_car_enabled;
+
+    if (key == '1')
+        glEnable(GL_LIGHT0);
+
+
+    if (key == '!')
+        glDisable(GL_LIGHT0);
+
+    if (key == '2')
+        glEnable(GL_LIGHT1);
+
+
+    if (key == '@')
+        glDisable(GL_LIGHT1);
 
     glutPostRedisplay();
 

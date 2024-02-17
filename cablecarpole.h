@@ -90,7 +90,7 @@ void drawTPole(float height)
     glPopMatrix();
     glPushMatrix();
     glTranslatef(0,height+1,0);
-    drawHorizontalPole(height);
+    drawHorizontalPole(10);
     glPopMatrix();
 
 }

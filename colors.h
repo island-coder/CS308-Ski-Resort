@@ -32,5 +32,8 @@ extern GLfloat yellowGreen[];
 
 extern GLfloat pineGreen[];
 
+extern GLfloat green[];
 
 extern GLfloat pink[];
+
+extern GLfloat gold[];
