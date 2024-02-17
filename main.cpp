@@ -10,7 +10,6 @@
 #include "terrain.h"
 #include "pinetree.h"
 #include "cablecarpole.h"
-#include "sled.h"
 #include "cablecar.h"
 #include "cablecarwithtower.h"
 #include "lodge.h"
@@ -21,9 +20,10 @@
 #include "resort.h"
 #include "fence.h"
 #include "snow.h"
+#include "doll.h"
+#include "sled.h"
 
 #include "scene.h"
-
 
 
 // For animating the rotation of the objects
@@ -53,7 +53,7 @@ void setLighting()
 //glEnable(GL_LIGHT1);
 //glEnable(GL_LIGHT2);
 // Set lighting intensity and color
-    GLfloat qaAmbientLight[] = { 0.5, 0.5, 0.5, 1.0 };
+    GLfloat qaAmbientLight[] = { 0.6, 0.6, 0.6, 1.0 };
     GLfloat qaDiffuseLight[] = { 0.4, 0.4, 0.4,0.1  };
     GLfloat qaSpecularLight[] = { 0.05, 0.05, 0.05,0.05 };
     glLightfv(GL_LIGHT0, GL_AMBIENT, qaAmbientLight);
@@ -157,9 +157,9 @@ void display()
     //drawCableCar();
     // drawLodgeWithBase();
     //drawCableCarWithTower();
-    //drawChristmasTree();
+   // drawChristmasTree();
 
-    renderScene();
+   renderScene();
 
     glPopMatrix();
 
@@ -210,6 +210,9 @@ void keyboard(unsigned char key, int x, int y)
 
     if (key == '@')
         glDisable(GL_LIGHT1);
+
+    if (key == '3')
+        treeLights=!treeLights;
 
     glutPostRedisplay();
 

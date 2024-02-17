@@ -18,6 +18,8 @@ extern GLfloat lightBrown2[];
 
 extern GLfloat lightBlue[];
 
+extern GLfloat yellow[];
+
 extern GLfloat darkYellow[];
 
 extern GLfloat red1[];

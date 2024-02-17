@@ -54,7 +54,7 @@ void drawFlag(GLfloat * color)
 void animateFlags()
 {
     //printf("%.2f \n",flag_animate_y);
-    if(flag_animate_y ==0.5 || flag_animate_y<0 && flag_animate_y >= -0.1)
+    if(flag_animate_y >0.6 && flag_animate_y <=0.7 || flag_animate_y<0 && flag_animate_y >= -0.1)
     {
         flag_animate_dir=-1*flag_animate_dir;
        // printf("flag dir changed\n");

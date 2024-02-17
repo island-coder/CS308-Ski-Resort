@@ -5,17 +5,17 @@ void mountainFoliage()
 {
 
     glPushMatrix();
-    glTranslatef(20,4,18);
+    glTranslatef(20,3.5,18);
     drawPineTree();
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(26,6,18);
+    glTranslatef(26,5.5,18);
     drawPineTree();
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(26,7,23);
+    glTranslatef(26,6.5,23);
     drawPineTree();
     glPopMatrix();
 
@@ -51,22 +51,22 @@ void mountainFoliage()
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(20,2,-10);
+    glTranslatef(20,1,-10);
     drawPineTree();
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(25,5,-15);
+    glTranslatef(25,4.5,-15);
     drawPineTree();
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(25,8,-30);
+    glTranslatef(25,7.5,-30);
     drawPineTree();
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(15,7,-35);
+    glTranslatef(15,6.5,-35);
     drawPineTree();
     glPopMatrix();
 }
@@ -122,17 +122,31 @@ void placeFlags()
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(10,8,-35);
+    glTranslatef(10,3,-37);
     glScalef(0.5,0.5,0.5);
     glRotatef(-50,0,1,0);
     drawFlag(red1);
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(20,12,-35);
+    glTranslatef(19.5,12,-35);
     glScalef(0.5,0.5,0.5);
     glRotatef(-50,0,1,0);
-    drawFlag(red1);
+    drawFlag(lightBlue);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(20,7,-25);
+    glScalef(0.5,0.5,0.5);
+    glRotatef(-50,0,1,0);
+    drawFlag(purple);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(30,10,-25);
+    glScalef(0.5,0.5,0.5);
+    glRotatef(-50,0,1,0);
+    drawFlag(orange);
     glPopMatrix();
 }
 
@@ -270,7 +284,7 @@ void placeTownSquare()
     drawBench();
     glPopMatrix();
 
-     glPushMatrix();
+    glPushMatrix();
     glTranslatef(-30,0,0);
     glScalef(0.3,0.3,0.3);
     glRotatef(90,0,1,0);

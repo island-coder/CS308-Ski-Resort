@@ -1,3 +1,4 @@
+int treeLights=0;
 
 void drawLeaves(GLfloat * color)
 {
@@ -68,8 +69,8 @@ void drawStar()
 {
     glPushMatrix();
     glEnable(GL_LIGHTING);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, gold);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, gold);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, yellow);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, yellow);
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
 
     glPushMatrix();
@@ -83,6 +84,43 @@ void drawStar()
 
     glDisable(GL_LIGHTING);
     glPopMatrix();
+
+}
+
+void drawBauble(GLfloat * color)
+{
+    glPushMatrix();
+    glEnable(GL_LIGHTING);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, color);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, color);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glutSolidSphere(0.2,30,30);
+    glDisable(GL_LIGHTING);
+    glPopMatrix();
+
+}
+
+void placeBaubles(float height,float radius)
+{
+    float y=0,angle=0,gap=0.2,PI=3.141;
+    int n=10;
+    GLfloat * colors[]= {red1,lightBlue,purple,orange,yellowGreen,gold};
+    if(!treeLights){
+            srand(1);
+    }
+    while(y<=height)
+    {
+        double x = radius * cos(angle);
+        double z = radius * sin(angle);
+        y = y + gap;
+
+        glPushMatrix();
+        glTranslatef(x,y,z);
+        drawBauble(colors[rand()%6]);
+        glPopMatrix();
+
+        angle = angle + ((2 * PI) / n);
+    }
 
 }
 
@@ -107,9 +145,18 @@ void drawChristmasTree()
     glPopMatrix();
 
     glPushMatrix();
-     glTranslatef(0,0,0);
+    glTranslatef(0,0,0);
     glRotatef(-90,1,0,0);
     drawTexturedCylinder(2,1,brick);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,3,0);
+    placeBaubles(2,2.6);
+    glTranslatef(0,1.8,0);
+    placeBaubles(1,2.2);
+    glTranslatef(0,1.8,0);
+    placeBaubles(1.2,1.5);
     glPopMatrix();
 
     glPopMatrix();

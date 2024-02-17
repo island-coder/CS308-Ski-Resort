@@ -10,6 +10,7 @@ GLfloat darkBrown[] ={.31, 0.149, 0.016};
 GLfloat lightBrown[] = {0.82, 0.424, 0};
 GLfloat lightBrown2[] = {0.541, 0.365, 0.094};
 GLfloat lightBlue[]= {0.02, 0.969, 0.906};
+GLfloat yellow[] = {1, 0.984, 0};
 GLfloat darkYellow[] = {1, 0.757, 0};
 GLfloat red1[] = {0.878, 0.188, 0};
 GLfloat purple[] = {0.918, 0.02, 0.988};

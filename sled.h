@@ -93,28 +93,41 @@ void drawSled()
 
 }
 
+void drawSledWithDoll()
+{
+    glPushMatrix();
+    drawSled();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,1,0);
+    drawDoll();
+    glPopMatrix();
+
+}
+
 void placeSleds()
 {
 
     glPushMatrix();
     glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
     glTranslatef(-17,0.6,-28);
-    glScalef(0.1,0.1,0.1);
-    drawSled();
+    glScalef(0.2,0.2,0.2);
+    drawSledWithDoll();
     glPopMatrix();
 
 
     glPushMatrix();
     glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
     glTranslatef(-20,0.6,-30);
-    glScalef(0.1,0.1,0.1);
+   glScalef(0.2,0.2,0.2);
     drawSled();
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
     glTranslatef(-15,0.6,-30);
-    glScalef(0.1,0.1,0.1);
+   glScalef(0.2,0.2,0.2);
     glRotatef(30,0,1,0);
     drawSled();
     glPopMatrix();
