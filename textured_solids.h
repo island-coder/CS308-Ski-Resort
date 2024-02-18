@@ -105,3 +105,31 @@ void drawTexturedCylinder(float radius,float height,GLuint texture)
     glDisable(GL_TEXTURE_2D);
     glPopMatrix();
 }
+
+void drawTexturedDisk(float radius,GLuint texture){
+
+    glPushMatrix ();
+    glEnable(GL_TEXTURE_2D);
+    glBindTexture(GL_TEXTURE_2D, texture);
+    float x=0,angle=0,y=0,PI=3.141;
+        int n=30
+        ;
+
+    glBegin(GL_POLYGON);
+    while(angle<=2*PI)
+    {
+         x = radius * cos(angle);
+         y = radius * sin(angle);
+
+        glPushMatrix();
+        glTexCoord2f(x,y);
+        glVertex3f(x,y,0);
+        glPopMatrix();
+
+        angle = angle + ((2 * PI) / n);
+    }
+    glEnd();
+
+    glDisable(GL_TEXTURE_2D);
+    glPopMatrix();
+}

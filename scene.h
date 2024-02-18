@@ -281,6 +281,8 @@ void placeTownSquare()
     glTranslatef(-30,0,-5);
     glScalef(0.3,0.3,0.3);
     glRotatef(90,0,1,0);
+
+
     drawBench();
     glPopMatrix();
 
@@ -295,6 +297,22 @@ void placeTownSquare()
     glTranslatef(-20,0,-6);
     //glScalef(0.3,0.3,0.3);
     drawChristmasTree();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(-28,1,-17);
+    glScalef(0.4,0.4,0.4);
+    glRotatef(30,0,1,0);
+    drawSnowMan();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(-30,1,-25);
+    glScalef(0.4,0.4,0.4);
+    glRotatef(-30,0,1,0);
+    drawNameBoardWithHandle();
     glPopMatrix();
 
 

@@ -98,6 +98,14 @@ void drawBezierLakeSegment()
     glPopMatrix();
 }
 
+void drawBoulder()
+{
+    glPushMatrix();
+    drawTexturedSphere(1,snow_rock);
+    glPopMatrix();
+}
+
+
 void drawBezierLake()
 {
     glPushMatrix();
@@ -117,4 +125,29 @@ void drawBezierLake()
     glScalef(2,1,2);
     drawBezierLakeSegment();
     glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0,0,-8);
+    glScalef(1.2,0.8,0.6);
+    drawBoulder();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(5,0,-8);
+    glScalef(1.5,0.8,1.6);
+    drawBoulder();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-3,0,-8);
+    glScalef(2.5,1.8,1.6);
+    drawBoulder();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-10,0,5);
+    glScalef(1.5,1.3,1.8);
+    drawBoulder();
+    glPopMatrix();
 }
+

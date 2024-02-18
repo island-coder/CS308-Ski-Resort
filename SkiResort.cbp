@@ -57,17 +57,20 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="colors.h" />
+		<Unit filename="doll.h" />
 		<Unit filename="fence.h" />
 		<Unit filename="flag.h" />
 		<Unit filename="lake.h" />
 		<Unit filename="lodge.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="nameboard.h" />
 		<Unit filename="pinetree.h" />
 		<Unit filename="resort.h" />
 		<Unit filename="scene.h" />
 		<Unit filename="skybox.h" />
 		<Unit filename="sled.h" />
 		<Unit filename="snow.h" />
+		<Unit filename="snowman.h" />
 		<Unit filename="terrain.h" />
 		<Unit filename="textured_solids.h" />
 		<Unit filename="textures.h" />

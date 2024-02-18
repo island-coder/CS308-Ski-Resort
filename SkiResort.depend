@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1708153092 source:e:\cs\300l\cs308\project\skiresort\colors.c
+1708226120 source:e:\cs\300l\cs308\project\skiresort\colors.c
 	<GL/glut.h>
 
 1426327440 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glut.h
@@ -2510,7 +2510,7 @@
 	<GL/gl.h>
 	<GL/gl.h>
 
-1708163357 source:e:\cs\300l\cs308\project\skiresort\main.cpp
+1708231013 source:e:\cs\300l\cs308\project\skiresort\main.cpp
 	<GL/glut.h>
 	<math.h>
 	<SOIL.h>
@@ -2533,6 +2533,8 @@
 	"snow.h"
 	"doll.h"
 	"sled.h"
+	"snowman.h"
+	"nameboard.h"
 	"scene.h"
 
 1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\math.h
@@ -2587,26 +2589,26 @@
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\_mingw_print_pop.h
 
-1708155719 e:\cs\300l\cs308\project\skiresort\pinetree.h
+1708184956 e:\cs\300l\cs308\project\skiresort\pinetree.h
 
 1708140838 e:\cs\300l\cs308\project\skiresort\cablecarpole.h
 	"colors.h"
 
-1708164273 e:\cs\300l\cs308\project\skiresort\sled.h
+1708184994 e:\cs\300l\cs308\project\skiresort\sled.h
 
 1708101628 e:\cs\300l\cs308\project\skiresort\cablecar.h
 	"colors.h"
 
-1708153102 e:\cs\300l\cs308\project\skiresort\colors.h
+1708226129 e:\cs\300l\cs308\project\skiresort\colors.h
 
 1708138158 e:\cs\300l\cs308\project\skiresort\cablecarwithtower.h
 
 1707987188 e:\cs\300l\cs308\project\skiresort\lodge.h
 	"colors.h"
 
-1708164885 e:\cs\300l\cs308\project\skiresort\scene.h
+1708231176 e:\cs\300l\cs308\project\skiresort\scene.h
 
-1708138242 e:\cs\300l\cs308\project\skiresort\lake.h
+1708182814 e:\cs\300l\cs308\project\skiresort\lake.h
 	"colors.h"
 
 1707833058 e:\cs\300l\cs308\project\skiresort\bench.h
@@ -2614,7 +2616,7 @@
 
 1708164815 e:\cs\300l\cs308\project\skiresort\flag.h
 
-1708102598 e:\cs\300l\cs308\project\skiresort\textures.h
+1708230895 e:\cs\300l\cs308\project\skiresort\textures.h
 
 1707928779 e:\cs\300l\cs308\project\skiresort\skybox.h
 
@@ -2627,9 +2629,13 @@
 
 1708059955 e:\cs\300l\cs308\project\skiresort\fence.h
 
-1708059031 e:\cs\300l\cs308\project\skiresort\textured_solids.h
+1708184935 e:\cs\300l\cs308\project\skiresort\textured_solids.h
 
 1708066058 e:\cs\300l\cs308\project\skiresort\snow.h
 
 1708164155 e:\cs\300l\cs308\project\skiresort\doll.h
+
+1708228431 e:\cs\300l\cs308\project\skiresort\snowman.h
+
+1708231190 e:\cs\300l\cs308\project\skiresort\nameboard.h
 

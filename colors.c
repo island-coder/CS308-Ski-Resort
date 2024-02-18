@@ -21,3 +21,4 @@ GLfloat pineGreen[] = {0.0392, 0.2824, 0.117};
 GLfloat green[] = {0.0, 0.5294, 0.2431};
 GLfloat pink[]= {1, 0.435, 0.718};
 GLfloat gold[]= {1,0.8431,0};
+GLfloat black[] = { 0, 0, 0.0, 1.0 };

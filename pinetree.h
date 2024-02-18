@@ -39,11 +39,11 @@ void drawLeaves(GLfloat * color)
 
 void drawTrunk()
 {
+    glPushMatrix();
     glEnable(GL_LIGHTING);
     glMaterialfv(GL_FRONT, GL_AMBIENT, darkBrown);
     glMaterialfv(GL_FRONT, GL_SPECULAR, darkBrown);
-    glPushMatrix();
-    //glColor3f(0.5f, 0.35f, 0.05f);
+//glColor3f(0.5f, 0.35f, 0.05f);
     glRotatef(-90,1,0,0);
     GLUquadric* quad = gluNewQuadric();
     gluCylinder(quad, 1, 1, 5, 20, 20);
@@ -102,11 +102,13 @@ void drawBauble(GLfloat * color)
 
 void placeBaubles(float height,float radius)
 {
-    float y=0,angle=0,gap=0.2,PI=3.141;
+    glPushMatrix();
+    float y=0,angle=0,gap=0.08,PI=3.141;
     int n=10;
     GLfloat * colors[]= {red1,lightBlue,purple,orange,yellowGreen,gold};
-    if(!treeLights){
-            srand(1);
+    if(!treeLights)
+    {
+        srand(1);
     }
     while(y<=height)
     {
@@ -121,7 +123,7 @@ void placeBaubles(float height,float radius)
 
         angle = angle + ((2 * PI) / n);
     }
-
+    glPopMatrix();
 }
 
 void drawChristmasTree()
@@ -145,6 +147,12 @@ void drawChristmasTree()
     glPopMatrix();
 
     glPushMatrix();
+    glTranslatef(0,1,0);
+    glRotatef(-90,1,0,0);
+    drawTexturedDisk(2,brick);
+    glPopMatrix();
+
+    glPushMatrix();
     glTranslatef(0,0,0);
     glRotatef(-90,1,0,0);
     drawTexturedCylinder(2,1,brick);
@@ -153,9 +161,9 @@ void drawChristmasTree()
     glPushMatrix();
     glTranslatef(0,3,0);
     placeBaubles(2,2.6);
-    glTranslatef(0,1.8,0);
+    glTranslatef(0,2,0);
     placeBaubles(1,2.2);
-    glTranslatef(0,1.8,0);
+    glTranslatef(0,2,0);
     placeBaubles(1.2,1.5);
     glPopMatrix();
 

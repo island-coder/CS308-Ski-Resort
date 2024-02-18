@@ -121,7 +121,7 @@ void placeSleds()
     glTranslatef(sled_mov_x,sled_mov_y,sled_mov_z);
     glTranslatef(-20,0.6,-30);
    glScalef(0.2,0.2,0.2);
-    drawSled();
+    drawSledWithDoll();
     glPopMatrix();
 
     glPushMatrix();
@@ -129,7 +129,7 @@ void placeSleds()
     glTranslatef(-15,0.6,-30);
    glScalef(0.2,0.2,0.2);
     glRotatef(30,0,1,0);
-    drawSled();
+    drawSledWithDoll();
     glPopMatrix();
 
 }

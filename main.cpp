@@ -22,6 +22,8 @@
 #include "snow.h"
 #include "doll.h"
 #include "sled.h"
+#include "snowman.h"
+#include "nameboard.h"
 
 #include "scene.h"
 
@@ -157,7 +159,11 @@ void display()
     //drawCableCar();
     // drawLodgeWithBase();
     //drawCableCarWithTower();
-   // drawChristmasTree();
+    //drawChristmasTree();
+
+     //drawTexturedDisk(2,brick);
+     //drawSnowMan();
+     //drawNameBoardWithHandle();
 
    renderScene();
 

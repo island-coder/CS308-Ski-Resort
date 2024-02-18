@@ -39,3 +39,5 @@ extern GLfloat green[];
 extern GLfloat pink[];
 
 extern GLfloat gold[];
+
+extern GLfloat black[];
